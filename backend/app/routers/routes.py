@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
+from app.services.scoring_engine import score_route
 
 router = APIRouter()
 
@@ -13,23 +14,18 @@ class RouteRequest(BaseModel):
 
 @router.post("/route")
 def get_safe_route(data: RouteRequest):
-    dummy_score = 82
+    start = {"lat": data.start.lat, "lng": data.start.lng}
+    end = {"lat": data.end.lat, "lng": data.end.lng}
+
+    result = score_route(start, end)
 
     return {
         "routes": [
             {
-                "geometry": [
-                    {"lat": data.start.lat, "lng": data.start.lng},
-                    {"lat": data.end.lat, "lng": data.end.lng}
-                ],
+                "geometry": [start, end],
                 "distance_km": 3.5,
-                "safety_score": dummy_score,
-                "breakdown": {
-                    "lighting": 85,
-                    "police_proximity": 78,
-                    "crime_risk": 80,
-                    "user_reports": 90
-                }
+                "safety_score": result["safety_score"],
+                "breakdown": result["breakdown"],
             }
         ]
     }
