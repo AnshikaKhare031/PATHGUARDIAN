@@ -1,5 +1,5 @@
-from fastapi import APIRouter
-from pydantic import BaseModel
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel, Field
 from datetime import datetime
 
 router = APIRouter()
@@ -8,28 +8,27 @@ reports_db = []
 
 
 class ReportRequest(BaseModel):
-    lat: float
-    lng: float
-    safety_rating: int
-    comment: str = ""
+    lat: float = Field(..., ge=-90, le=90)
+    lng: float = Field(..., ge=-180, le=180)
+    safety_rating: int = Field(..., ge=1, le=5, description="1 = very unsafe, 5 = very safe")
+    comment: str = Field(default="", max_length=500)
 
 
 @router.post("/reports")
 def submit_report(data: ReportRequest):
-    if not (1 <= data.safety_rating <= 5):
-        return {"error": "safety_rating must be between 1 and 5"}
-
-    report = {
-        "id": len(reports_db) + 1,
-        "lat": data.lat,
-        "lng": data.lng,
-        "safety_rating": data.safety_rating,
-        "comment": data.comment,
-        "timestamp": datetime.utcnow().isoformat(),
-    }
-    reports_db.append(report)
-
-    return {"message": "Report submitted successfully", "report": report}
+    try:
+        report = {
+            "id": len(reports_db) + 1,
+            "lat": data.lat,
+            "lng": data.lng,
+            "safety_rating": data.safety_rating,
+            "comment": data.comment.strip(),
+            "timestamp": datetime.utcnow().isoformat(),
+        }
+        reports_db.append(report)
+        return {"message": "Report submitted successfully", "report": report}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to submit report: {str(e)}")
 
 
 @router.get("/reports")
