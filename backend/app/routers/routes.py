@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 from app.services.scoring_engine import score_route
+from app.services.routing_service import get_real_route
 
 router = APIRouter()
 
@@ -13,7 +14,7 @@ class RouteRequest(BaseModel):
     end: Coordinates
 
 @router.post("/route")
-def get_safe_route(data: RouteRequest):
+async def get_safe_route(data: RouteRequest):
     try:
         start = {"lat": data.start.lat, "lng": data.start.lng}
         end = {"lat": data.end.lat, "lng": data.end.lng}
@@ -21,15 +22,17 @@ def get_safe_route(data: RouteRequest):
         if start == end:
             raise HTTPException(status_code=400, detail="Start and end points cannot be the same")
 
-        result = score_route(start, end)
+        route_data = await get_real_route(start, end)
+        score_data = score_route(start, end)
 
         return {
             "routes": [
                 {
-                    "geometry": [start, end],
-                    "distance_km": 3.5,
-                    "safety_score": result["safety_score"],
-                    "breakdown": result["breakdown"],
+                    "geometry": route_data["geometry"],
+                    "distance_km": route_data["distance_km"],
+                    "duration_min": route_data.get("duration_min"),
+                    "safety_score": score_data["safety_score"],
+                    "breakdown": score_data["breakdown"],
                 }
             ]
         }
