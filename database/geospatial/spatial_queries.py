@@ -33,12 +33,6 @@ def get_score_for_point(lat, lng):
         return None
 
 
-if __name__ == "__main__":
-    test_lat = 26.4499
-    test_lng = 80.3319
-
-    score = get_score_for_point(test_lat, test_lng)
-    print("Safety score at that point:", score)
 
 def get_reports_near(lat, lng, radius_meters):
     conn = get_connection()
@@ -62,12 +56,42 @@ def get_reports_near(lat, lng, radius_meters):
 
     return results
 
+
+
+def insert_report(lat, lng, category, description):
+    conn = get_connection()
+    cur = conn.cursor()
+
+    query = """
+        INSERT INTO user_reports (location, category, description)
+        VALUES (ST_SetSRID(ST_MakePoint(%s, %s), 4326), %s, %s)
+        RETURNING id;
+    """
+
+    cur.execute(query, (lng, lat, category, description))
+    new_id = cur.fetchone()[0]
+
+    conn.commit()
+
+    cur.close()
+    conn.close()
+
+    return new_id
+
 if __name__ == "__main__":
     test_lat = 26.4499
     test_lng = 80.3319
 
-    #score = get_score_for_point(test_lat, test_lng)
-    #print("Safety score at that point:", score)
+    score = get_score_for_point(test_lat, test_lng)
+    print("Safety score at that point:", score)
 
     reports = get_reports_near(test_lat, test_lng, 1000)
     print("Reports within 1km:", reports)
+
+    new_report_id = insert_report(
+        test_lat,
+        test_lng,
+        "poor_lighting",
+        "Streetlight not working near this junction"
+    )
+    print("New report inserted with ID:", new_report_id)
