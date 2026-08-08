@@ -39,3 +39,35 @@ if __name__ == "__main__":
 
     score = get_score_for_point(test_lat, test_lng)
     print("Safety score at that point:", score)
+
+def get_reports_near(lat, lng, radius_meters):
+    conn = get_connection()
+    cur = conn.cursor()
+
+    query = """
+        SELECT id, category, description, reported_at
+        FROM user_reports
+        WHERE ST_DWithin(
+            location::geography,
+            ST_SetSRID(ST_MakePoint(%s, %s), 4326)::geography,
+            %s
+        );
+    """
+
+    cur.execute(query, (lng, lat, radius_meters))
+    results = cur.fetchall()
+
+    cur.close()
+    conn.close()
+
+    return results
+
+if __name__ == "__main__":
+    test_lat = 26.4499
+    test_lng = 80.3319
+
+    #score = get_score_for_point(test_lat, test_lng)
+    #print("Safety score at that point:", score)
+
+    reports = get_reports_near(test_lat, test_lng, 1000)
+    print("Reports within 1km:", reports)
