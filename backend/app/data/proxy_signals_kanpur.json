@@ -1,0 +1,1486 @@
+[
+  {
+    "latitude": 26.497532,
+    "longitude": 80.28045,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.497057,
+    "longitude": 80.28187,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.477356,
+    "longitude": 80.31414,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.474764,
+    "longitude": 80.313936,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.454404,
+    "longitude": 80.351854,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.454226,
+    "longitude": 80.351183,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.454638,
+    "longitude": 80.35097,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.454508,
+    "longitude": 80.350919,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.454482,
+    "longitude": 80.351331,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.454908,
+    "longitude": 80.350758,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.455085,
+    "longitude": 80.35027,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.45477,
+    "longitude": 80.350221,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "osm"
+  },
+  {
+    "latitude": 26.454188,
+    "longitude": 80.364264,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "osm",
+    "name": "Police Station Kanpur Cantonment"
+  },
+  {
+    "latitude": 26.453714,
+    "longitude": 80.350288,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "osm",
+    "name": "Railway Police Force Post"
+  },
+  {
+    "latitude": 26.467388,
+    "longitude": 80.298357,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "osm",
+    "name": "police chawki"
+  },
+  {
+    "latitude": 26.472727,
+    "longitude": 80.344398,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "osm",
+    "name": "Police chawki"
+  },
+  {
+    "latitude": 26.473106,
+    "longitude": 80.342952,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "osm",
+    "name": "Police station "
+  },
+  {
+    "latitude": 26.42352,
+    "longitude": 80.388663,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "osm",
+    "name": "POLICE CHOWKI"
+  },
+  {
+    "latitude": 26.495914,
+    "longitude": 80.283502,
+    "signal_type": "streetlight",
+    "weight": 0.57,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.433482,
+    "longitude": 80.383106,
+    "signal_type": "streetlight",
+    "weight": 0.81,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.533827,
+    "longitude": 80.292171,
+    "signal_type": "streetlight",
+    "weight": 0.65,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.40447,
+    "longitude": 80.310609,
+    "signal_type": "streetlight",
+    "weight": 0.7,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.40398,
+    "longitude": 80.307837,
+    "signal_type": "streetlight",
+    "weight": 0.79,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.481741,
+    "longitude": 80.310862,
+    "signal_type": "streetlight",
+    "weight": 0.75,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.521415,
+    "longitude": 80.28091,
+    "signal_type": "streetlight",
+    "weight": 0.88,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.504721,
+    "longitude": 80.327635,
+    "signal_type": "streetlight",
+    "weight": 0.49,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.543582,
+    "longitude": 80.327123,
+    "signal_type": "streetlight",
+    "weight": 0.46,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.414507,
+    "longitude": 80.398649,
+    "signal_type": "streetlight",
+    "weight": 0.76,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.521069,
+    "longitude": 80.382162,
+    "signal_type": "streetlight",
+    "weight": 0.72,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.545967,
+    "longitude": 80.332995,
+    "signal_type": "streetlight",
+    "weight": 0.73,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.524411,
+    "longitude": 80.366593,
+    "signal_type": "streetlight",
+    "weight": 0.92,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.486603,
+    "longitude": 80.37864,
+    "signal_type": "streetlight",
+    "weight": 0.43,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.434185,
+    "longitude": 80.320514,
+    "signal_type": "streetlight",
+    "weight": 0.45,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.434919,
+    "longitude": 80.29414,
+    "signal_type": "streetlight",
+    "weight": 0.57,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.495353,
+    "longitude": 80.331077,
+    "signal_type": "streetlight",
+    "weight": 0.62,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.431426,
+    "longitude": 80.317377,
+    "signal_type": "streetlight",
+    "weight": 0.96,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.497205,
+    "longitude": 80.365278,
+    "signal_type": "streetlight",
+    "weight": 0.5,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.509369,
+    "longitude": 80.302876,
+    "signal_type": "streetlight",
+    "weight": 0.63,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.548429,
+    "longitude": 80.3696,
+    "signal_type": "streetlight",
+    "weight": 0.73,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.502692,
+    "longitude": 80.397999,
+    "signal_type": "streetlight",
+    "weight": 0.87,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.434357,
+    "longitude": 80.284494,
+    "signal_type": "streetlight",
+    "weight": 0.59,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.440161,
+    "longitude": 80.309538,
+    "signal_type": "streetlight",
+    "weight": 0.97,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.531455,
+    "longitude": 80.324055,
+    "signal_type": "streetlight",
+    "weight": 0.79,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.459345,
+    "longitude": 80.408037,
+    "signal_type": "streetlight",
+    "weight": 0.68,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.439732,
+    "longitude": 80.314528,
+    "signal_type": "streetlight",
+    "weight": 0.74,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.439411,
+    "longitude": 80.361842,
+    "signal_type": "streetlight",
+    "weight": 0.94,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.45991,
+    "longitude": 80.310705,
+    "signal_type": "streetlight",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.476429,
+    "longitude": 80.292727,
+    "signal_type": "streetlight",
+    "weight": 0.43,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.416447,
+    "longitude": 80.367842,
+    "signal_type": "streetlight",
+    "weight": 0.88,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.463324,
+    "longitude": 80.288894,
+    "signal_type": "streetlight",
+    "weight": 0.63,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.549418,
+    "longitude": 80.354076,
+    "signal_type": "streetlight",
+    "weight": 0.98,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.529117,
+    "longitude": 80.281607,
+    "signal_type": "streetlight",
+    "weight": 0.83,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.502257,
+    "longitude": 80.355176,
+    "signal_type": "streetlight",
+    "weight": 0.56,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.496144,
+    "longitude": 80.295617,
+    "signal_type": "streetlight",
+    "weight": 0.66,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.468059,
+    "longitude": 80.413534,
+    "signal_type": "streetlight",
+    "weight": 0.93,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.439508,
+    "longitude": 80.350082,
+    "signal_type": "streetlight",
+    "weight": 0.51,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.536894,
+    "longitude": 80.401873,
+    "signal_type": "streetlight",
+    "weight": 0.58,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.495842,
+    "longitude": 80.365256,
+    "signal_type": "streetlight",
+    "weight": 0.49,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.514377,
+    "longitude": 80.355513,
+    "signal_type": "streetlight",
+    "weight": 0.87,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.479553,
+    "longitude": 80.28008,
+    "signal_type": "streetlight",
+    "weight": 0.59,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.402922,
+    "longitude": 80.410074,
+    "signal_type": "streetlight",
+    "weight": 0.93,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.52475,
+    "longitude": 80.323052,
+    "signal_type": "streetlight",
+    "weight": 0.43,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.531701,
+    "longitude": 80.412573,
+    "signal_type": "streetlight",
+    "weight": 0.45,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.472899,
+    "longitude": 80.28969,
+    "signal_type": "streetlight",
+    "weight": 0.86,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.514875,
+    "longitude": 80.297975,
+    "signal_type": "streetlight",
+    "weight": 0.69,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.482471,
+    "longitude": 80.317108,
+    "signal_type": "streetlight",
+    "weight": 0.92,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.463471,
+    "longitude": 80.309652,
+    "signal_type": "streetlight",
+    "weight": 0.72,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.50949,
+    "longitude": 80.308161,
+    "signal_type": "streetlight",
+    "weight": 0.59,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.549272,
+    "longitude": 80.370983,
+    "signal_type": "streetlight",
+    "weight": 0.66,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.477636,
+    "longitude": 80.296941,
+    "signal_type": "streetlight",
+    "weight": 0.53,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.450713,
+    "longitude": 80.362363,
+    "signal_type": "streetlight",
+    "weight": 0.54,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.433033,
+    "longitude": 80.289939,
+    "signal_type": "streetlight",
+    "weight": 0.78,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.434341,
+    "longitude": 80.406759,
+    "signal_type": "streetlight",
+    "weight": 0.92,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.410629,
+    "longitude": 80.313321,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.432136,
+    "longitude": 80.298524,
+    "signal_type": "streetlight",
+    "weight": 0.96,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.485656,
+    "longitude": 80.346174,
+    "signal_type": "streetlight",
+    "weight": 0.87,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.521125,
+    "longitude": 80.306657,
+    "signal_type": "streetlight",
+    "weight": 0.46,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.464658,
+    "longitude": 80.339301,
+    "signal_type": "streetlight",
+    "weight": 0.68,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.509361,
+    "longitude": 80.374271,
+    "signal_type": "streetlight",
+    "weight": 0.99,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.414763,
+    "longitude": 80.336367,
+    "signal_type": "streetlight",
+    "weight": 0.6,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.529251,
+    "longitude": 80.314812,
+    "signal_type": "streetlight",
+    "weight": 0.51,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.467292,
+    "longitude": 80.339063,
+    "signal_type": "streetlight",
+    "weight": 0.57,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.437471,
+    "longitude": 80.409257,
+    "signal_type": "streetlight",
+    "weight": 0.67,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.529202,
+    "longitude": 80.357046,
+    "signal_type": "streetlight",
+    "weight": 0.43,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.549892,
+    "longitude": 80.397044,
+    "signal_type": "streetlight",
+    "weight": 0.98,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.538955,
+    "longitude": 80.398817,
+    "signal_type": "streetlight",
+    "weight": 0.5,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.472846,
+    "longitude": 80.309925,
+    "signal_type": "streetlight",
+    "weight": 0.64,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.408795,
+    "longitude": 80.333056,
+    "signal_type": "streetlight",
+    "weight": 0.99,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.43978,
+    "longitude": 80.38977,
+    "signal_type": "streetlight",
+    "weight": 0.67,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.463451,
+    "longitude": 80.414024,
+    "signal_type": "streetlight",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.483365,
+    "longitude": 80.380577,
+    "signal_type": "streetlight",
+    "weight": 0.49,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.444506,
+    "longitude": 80.415619,
+    "signal_type": "streetlight",
+    "weight": 0.75,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.481329,
+    "longitude": 80.384717,
+    "signal_type": "streetlight",
+    "weight": 0.43,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.487627,
+    "longitude": 80.350399,
+    "signal_type": "streetlight",
+    "weight": 0.91,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.423615,
+    "longitude": 80.414509,
+    "signal_type": "streetlight",
+    "weight": 0.45,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.427874,
+    "longitude": 80.363305,
+    "signal_type": "streetlight",
+    "weight": 0.81,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.435281,
+    "longitude": 80.296784,
+    "signal_type": "streetlight",
+    "weight": 0.93,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.436932,
+    "longitude": 80.363233,
+    "signal_type": "streetlight",
+    "weight": 0.77,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.462884,
+    "longitude": 80.361714,
+    "signal_type": "streetlight",
+    "weight": 0.71,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.540206,
+    "longitude": 80.308596,
+    "signal_type": "streetlight",
+    "weight": 0.83,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.435803,
+    "longitude": 80.33541,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.445,
+    "longitude": 80.324265,
+    "signal_type": "streetlight",
+    "weight": 0.85,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.410881,
+    "longitude": 80.34416,
+    "signal_type": "streetlight",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.549414,
+    "longitude": 80.290257,
+    "signal_type": "streetlight",
+    "weight": 0.53,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.43978,
+    "longitude": 80.410656,
+    "signal_type": "streetlight",
+    "weight": 0.93,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.531891,
+    "longitude": 80.331734,
+    "signal_type": "streetlight",
+    "weight": 0.49,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.525062,
+    "longitude": 80.378496,
+    "signal_type": "streetlight",
+    "weight": 0.77,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.548085,
+    "longitude": 80.371557,
+    "signal_type": "streetlight",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.522566,
+    "longitude": 80.321913,
+    "signal_type": "streetlight",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.54084,
+    "longitude": 80.298801,
+    "signal_type": "streetlight",
+    "weight": 0.47,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.416055,
+    "longitude": 80.357451,
+    "signal_type": "streetlight",
+    "weight": 0.56,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.490724,
+    "longitude": 80.380466,
+    "signal_type": "streetlight",
+    "weight": 0.52,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.495136,
+    "longitude": 80.316958,
+    "signal_type": "streetlight",
+    "weight": 0.69,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.5358,
+    "longitude": 80.398455,
+    "signal_type": "streetlight",
+    "weight": 0.46,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.463536,
+    "longitude": 80.318735,
+    "signal_type": "streetlight",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.515668,
+    "longitude": 80.369196,
+    "signal_type": "streetlight",
+    "weight": 0.56,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.511185,
+    "longitude": 80.357235,
+    "signal_type": "streetlight",
+    "weight": 0.66,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.40145,
+    "longitude": 80.290534,
+    "signal_type": "streetlight",
+    "weight": 0.93,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.535589,
+    "longitude": 80.356383,
+    "signal_type": "streetlight",
+    "weight": 0.9,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.487376,
+    "longitude": 80.300733,
+    "signal_type": "streetlight",
+    "weight": 0.48,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.446239,
+    "longitude": 80.405857,
+    "signal_type": "streetlight",
+    "weight": 0.88,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.529105,
+    "longitude": 80.405849,
+    "signal_type": "streetlight",
+    "weight": 0.53,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.437429,
+    "longitude": 80.294391,
+    "signal_type": "streetlight",
+    "weight": 0.87,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.53262,
+    "longitude": 80.336893,
+    "signal_type": "streetlight",
+    "weight": 0.77,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.423183,
+    "longitude": 80.410183,
+    "signal_type": "streetlight",
+    "weight": 0.92,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.546431,
+    "longitude": 80.393508,
+    "signal_type": "streetlight",
+    "weight": 0.93,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.403718,
+    "longitude": 80.383119,
+    "signal_type": "streetlight",
+    "weight": 0.6,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.539622,
+    "longitude": 80.392313,
+    "signal_type": "streetlight",
+    "weight": 0.92,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.521612,
+    "longitude": 80.317353,
+    "signal_type": "streetlight",
+    "weight": 0.87,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.416214,
+    "longitude": 80.402103,
+    "signal_type": "streetlight",
+    "weight": 0.92,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.433365,
+    "longitude": 80.394322,
+    "signal_type": "streetlight",
+    "weight": 0.68,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.445779,
+    "longitude": 80.391348,
+    "signal_type": "streetlight",
+    "weight": 0.54,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.40355,
+    "longitude": 80.307038,
+    "signal_type": "streetlight",
+    "weight": 0.6,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.529653,
+    "longitude": 80.415364,
+    "signal_type": "streetlight",
+    "weight": 0.57,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.496222,
+    "longitude": 80.335955,
+    "signal_type": "streetlight",
+    "weight": 0.99,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.480432,
+    "longitude": 80.411493,
+    "signal_type": "streetlight",
+    "weight": 0.47,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.54556,
+    "longitude": 80.304999,
+    "signal_type": "streetlight",
+    "weight": 0.98,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.43982,
+    "longitude": 80.295176,
+    "signal_type": "streetlight",
+    "weight": 0.66,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.509282,
+    "longitude": 80.323915,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Kotwali Police Station"
+  },
+  {
+    "latitude": 26.490931,
+    "longitude": 80.351599,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Colonelganj Police Station"
+  },
+  {
+    "latitude": 26.457779,
+    "longitude": 80.360722,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Govind Nagar Police Station"
+  },
+  {
+    "latitude": 26.438208,
+    "longitude": 80.37923,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Chakeri Police Station"
+  },
+  {
+    "latitude": 26.400254,
+    "longitude": 80.409581,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Kidwai Nagar Police Station"
+  },
+  {
+    "latitude": 26.480768,
+    "longitude": 80.38072,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Swaroop Nagar Police Station"
+  },
+  {
+    "latitude": 26.511293,
+    "longitude": 80.373888,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Rawatpur Police Station"
+  },
+  {
+    "latitude": 26.454633,
+    "longitude": 80.289796,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Naubasta Police Station"
+  },
+  {
+    "latitude": 26.499636,
+    "longitude": 80.326228,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Panki Police Station"
+  },
+  {
+    "latitude": 26.447087,
+    "longitude": 80.398722,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Bara Chauraha Police Station"
+  },
+  {
+    "latitude": 26.507963,
+    "longitude": 80.322045,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Kalyanpur Police Station"
+  },
+  {
+    "latitude": 26.446393,
+    "longitude": 80.337175,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Ghantaghar Police Station"
+  },
+  {
+    "latitude": 26.46036,
+    "longitude": 80.321392,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Fazalganj Police Station"
+  },
+  {
+    "latitude": 26.419093,
+    "longitude": 80.338862,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "source": "mock",
+    "name": "Barra Police Station"
+  },
+  {
+    "latitude": 26.541055,
+    "longitude": 80.374825,
+    "signal_type": "foot_traffic",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.492327,
+    "longitude": 80.322133,
+    "signal_type": "foot_traffic",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.525059,
+    "longitude": 80.322542,
+    "signal_type": "foot_traffic",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.464483,
+    "longitude": 80.361198,
+    "signal_type": "foot_traffic",
+    "weight": 0.6,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.469748,
+    "longitude": 80.341902,
+    "signal_type": "foot_traffic",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.476676,
+    "longitude": 80.391123,
+    "signal_type": "foot_traffic",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.498828,
+    "longitude": 80.31973,
+    "signal_type": "foot_traffic",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.450278,
+    "longitude": 80.394579,
+    "signal_type": "foot_traffic",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.500919,
+    "longitude": 80.31145,
+    "signal_type": "foot_traffic",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.422103,
+    "longitude": 80.28647,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.491691,
+    "longitude": 80.387589,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.462166,
+    "longitude": 80.368167,
+    "signal_type": "foot_traffic",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.507752,
+    "longitude": 80.333757,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.436598,
+    "longitude": 80.371848,
+    "signal_type": "foot_traffic",
+    "weight": 0.2,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.533899,
+    "longitude": 80.400462,
+    "signal_type": "foot_traffic",
+    "weight": 0.2,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.516763,
+    "longitude": 80.310638,
+    "signal_type": "foot_traffic",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.469682,
+    "longitude": 80.358037,
+    "signal_type": "foot_traffic",
+    "weight": 0.2,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.468469,
+    "longitude": 80.392198,
+    "signal_type": "foot_traffic",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.548184,
+    "longitude": 80.363363,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.491898,
+    "longitude": 80.380698,
+    "signal_type": "foot_traffic",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.464011,
+    "longitude": 80.40696,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.534581,
+    "longitude": 80.384112,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.46751,
+    "longitude": 80.385249,
+    "signal_type": "foot_traffic",
+    "weight": 0.6,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.514872,
+    "longitude": 80.352982,
+    "signal_type": "foot_traffic",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.44119,
+    "longitude": 80.290848,
+    "signal_type": "foot_traffic",
+    "weight": 0.6,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.435174,
+    "longitude": 80.327019,
+    "signal_type": "foot_traffic",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.412087,
+    "longitude": 80.301116,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.504092,
+    "longitude": 80.378899,
+    "signal_type": "foot_traffic",
+    "weight": 0.2,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.46223,
+    "longitude": 80.326323,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.462366,
+    "longitude": 80.308957,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.458422,
+    "longitude": 80.387771,
+    "signal_type": "foot_traffic",
+    "weight": 0.2,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.52851,
+    "longitude": 80.387183,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.471547,
+    "longitude": 80.411984,
+    "signal_type": "foot_traffic",
+    "weight": 0.6,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.513021,
+    "longitude": 80.399483,
+    "signal_type": "foot_traffic",
+    "weight": 0.8,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.480733,
+    "longitude": 80.382849,
+    "signal_type": "foot_traffic",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.534672,
+    "longitude": 80.348352,
+    "signal_type": "foot_traffic",
+    "weight": 0.6,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.465375,
+    "longitude": 80.284063,
+    "signal_type": "foot_traffic",
+    "weight": 0.6,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.500331,
+    "longitude": 80.39174,
+    "signal_type": "foot_traffic",
+    "weight": 0.4,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.526076,
+    "longitude": 80.408736,
+    "signal_type": "foot_traffic",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.480119,
+    "longitude": 80.40697,
+    "signal_type": "foot_traffic",
+    "weight": 1.0,
+    "source": "mock"
+  },
+  {
+    "latitude": 26.484659,
+    "longitude": 80.283794,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "other"
+  },
+  {
+    "latitude": 26.420355,
+    "longitude": 80.344638,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "poor_lighting"
+  },
+  {
+    "latitude": 26.439023,
+    "longitude": 80.325829,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "other"
+  },
+  {
+    "latitude": 26.449027,
+    "longitude": 80.386572,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "other"
+  },
+  {
+    "latitude": 26.441738,
+    "longitude": 80.413169,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "other"
+  },
+  {
+    "latitude": 26.437841,
+    "longitude": 80.291467,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "poor_lighting"
+  },
+  {
+    "latitude": 26.512354,
+    "longitude": 80.287292,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "suspicious_activity"
+  },
+  {
+    "latitude": 26.433633,
+    "longitude": 80.289607,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "poor_lighting"
+  },
+  {
+    "latitude": 26.513135,
+    "longitude": 80.412946,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "harassment"
+  },
+  {
+    "latitude": 26.525884,
+    "longitude": 80.366987,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "harassment"
+  },
+  {
+    "latitude": 26.418933,
+    "longitude": 80.373724,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "harassment"
+  },
+  {
+    "latitude": 26.469755,
+    "longitude": 80.315874,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "suspicious_activity"
+  },
+  {
+    "latitude": 26.425168,
+    "longitude": 80.365015,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "poor_lighting"
+  },
+  {
+    "latitude": 26.516669,
+    "longitude": 80.302927,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "suspicious_activity"
+  },
+  {
+    "latitude": 26.416215,
+    "longitude": 80.283595,
+    "signal_type": "user_report",
+    "weight": 0.5,
+    "source": "mock",
+    "category": "suspicious_activity"
+  }
+]
