@@ -59,7 +59,7 @@ CREATE INDEX idx_streetlights_location ON streetlights USING GIST (location);
 CREATE TABLE points_of_interest (
     id SERIAL PRIMARY KEY,
     name TEXT,
-    category TEXT,  -- e.g. 'shop', 'restaurant', 'transit_stop'
+    category TEXT NOT NULL CHECK (category IN ('poor_lighting', 'harassment', 'suspicious_activity', 'other')),
     location GEOMETRY(Point, 4326) NOT NULL,
     source TEXT DEFAULT 'osm'
 );
