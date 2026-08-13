@@ -1,0 +1,50 @@
+[
+  {
+    "latitude": 26.454188,
+    "longitude": 80.364264,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "name": "Police Station Kanpur Cantonment",
+    "source": "osm"
+  },
+  {
+    "latitude": 26.453714,
+    "longitude": 80.350288,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "name": "Railway Police Force Post",
+    "source": "osm"
+  },
+  {
+    "latitude": 26.467388,
+    "longitude": 80.298357,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "name": "police chawki",
+    "source": "osm"
+  },
+  {
+    "latitude": 26.472727,
+    "longitude": 80.344398,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "name": "Police chawki",
+    "source": "osm"
+  },
+  {
+    "latitude": 26.473106,
+    "longitude": 80.342952,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "name": "Police station ",
+    "source": "osm"
+  },
+  {
+    "latitude": 26.42352,
+    "longitude": 80.388663,
+    "signal_type": "police_station",
+    "weight": 1.0,
+    "name": "POLICE CHOWKI",
+    "source": "osm"
+  }
+]
