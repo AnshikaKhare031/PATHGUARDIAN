@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import routes, reports
+from app.routers import routes, reports, score
 
 app = FastAPI(title="PathGuardian Backend")
 
@@ -17,3 +17,4 @@ def health():
 
 app.include_router(routes.router, prefix="/api")
 app.include_router(reports.router, prefix="/api")
+app.include_router(score.router, prefix="/api", tags=["Score"])
