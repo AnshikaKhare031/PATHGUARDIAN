@@ -1,6 +1,7 @@
 import psycopg2
 from dotenv import load_dotenv
 import os
+import h3
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "config", ".env"))
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -10,23 +11,25 @@ def get_connection():
 
 
 def get_score_for_point(lat, lng):
+    hex_id = h3.latlng_to_cell(lat, lng, 9)
+
     conn = get_connection()
     cur = conn.cursor()
-    
+
     query = """
         SELECT s.score
         FROM grid_cells g
         JOIN safety_scores s ON s.cell_id = g.id
-        WHERE ST_Contains(g.cell_geom, ST_SetSRID(ST_MakePoint(%s, %s), 4326))
+        WHERE g.h3_index = %s
         LIMIT 1;
     """
-    
-    cur.execute(query, (lng, lat))
+
+    cur.execute(query, (hex_id,))
     result = cur.fetchone()
-    
+
     cur.close()
     conn.close()
-    
+
     if result:
         return result[0]
     else:
