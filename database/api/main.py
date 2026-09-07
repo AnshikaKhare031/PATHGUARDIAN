@@ -1,7 +1,7 @@
 from unicodedata import category
 
 from fastapi import FastAPI
-from database.geospatial.spatial_queries import get_score_for_point,  get_reports_near, get_scores_for_points, insert_report
+from database.geospatial.spatial_queries import get_score_for_point,  get_reports_near, get_scores_for_points, insert_report, delete_report
 from pydantic import BaseModel
 from typing import List, Tuple
 class RoutePoints(BaseModel):   #basemodel: used for defining the exact shape of the data 
@@ -44,3 +44,12 @@ class ReportInput(BaseModel):
 def create_report(data: ReportInput):
     new_id = insert_report(data.lat, data.lng, data.category, data.description)
     return {"message": "Report created", "id": new_id}
+
+
+@app.delete("/api/reports/{report_id}")
+def remove_report(report_id: int):
+    success = delete_report(report_id)
+    if success:
+        return {"message": "Report deleted", "id": report_id}
+    else:
+        return {"message": "Report not found", "id": report_id}
