@@ -17,7 +17,6 @@ const ReportForm = () => {
     setError("");
     setSuccess("");
 
-    // Validate the form
     if (!reportType) {
       setError("Please select a safety concern.");
       return;
@@ -43,25 +42,21 @@ const ReportForm = () => {
       return;
     }
 
-    // Convert severity into the rating expected by the backend
     const safetyRating = {
       low: 1,
       medium: 3,
       high: 5,
     };
 
-    // Check whether browser location services are available
     if (!navigator.geolocation) {
       setError("Location services are not supported by this browser.");
       return;
     }
 
-    // Get user's current coordinates
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const { latitude, longitude } = position.coords;
 
-        // Combine report information into the comment
         const comment = `
 Concern: ${reportType}
 Description: ${description}
@@ -71,7 +66,6 @@ Incident Time: ${incidentTime}
 Anonymous: ${anonymous ? "Yes" : "No"}
         `.trim();
 
-        // Data expected by the backend
         const reportData = {
           lat: latitude,
           lng: longitude,
@@ -101,7 +95,6 @@ Anonymous: ${anonymous ? "Yes" : "No"}
 
           setSuccess("Report submitted successfully!");
 
-          // Clear the form after successful submission
           setReportType("");
           setDescription("");
           setLocation("");
