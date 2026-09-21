@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./ReportForm.css";
 
 const ReportForm = () => {
   const [reportType, setReportType] = useState("");
@@ -7,7 +8,6 @@ const ReportForm = () => {
   const [severity, setSeverity] = useState("");
   const [incidentTime, setIncidentTime] = useState("");
   const [anonymous, setAnonymous] = useState(false);
-
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -17,7 +17,6 @@ const ReportForm = () => {
     setError("");
     setSuccess("");
 
-    // Validate the form
     if (!reportType) {
       setError("Please select a safety concern.");
       return;
@@ -43,25 +42,21 @@ const ReportForm = () => {
       return;
     }
 
-    // Convert severity into the rating expected by the backend
     const safetyRating = {
       low: 1,
       medium: 3,
       high: 5,
     };
 
-    // Check whether browser location services are available
     if (!navigator.geolocation) {
       setError("Location services are not supported by this browser.");
       return;
     }
 
-    // Get user's current coordinates
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const { latitude, longitude } = position.coords;
 
-        // Combine report information into the comment
         const comment = `
 Concern: ${reportType}
 Description: ${description}
@@ -71,7 +66,6 @@ Incident Time: ${incidentTime}
 Anonymous: ${anonymous ? "Yes" : "No"}
         `.trim();
 
-        // Data expected by the backend
         const reportData = {
           lat: latitude,
           lng: longitude,
@@ -101,7 +95,6 @@ Anonymous: ${anonymous ? "Yes" : "No"}
 
           setSuccess("Report submitted successfully!");
 
-          // Clear the form after successful submission
           setReportType("");
           setDescription("");
           setLocation("");
@@ -122,8 +115,14 @@ Anonymous: ${anonymous ? "Yes" : "No"}
   };
 
   return (
-    <div>
-      <h2>Report a Safety Concern</h2>
+    <div className="report-container">
+      <div className="report-header">
+        <h2>PathGuardian</h2>
+        <p>
+          Help make your neighborhood safer by reporting incidents and unsafe
+          conditions.
+        </p>
+      </div>
 
       <form onSubmit={handleSubmit}>
         <label>What happened?</label>
@@ -160,7 +159,7 @@ Anonymous: ${anonymous ? "Yes" : "No"}
           placeholder="Enter the location"
         />
 
-        <label>
+        <label className="checkbox-label">
           <input
             type="checkbox"
             checked={anonymous}
@@ -183,6 +182,9 @@ Anonymous: ${anonymous ? "Yes" : "No"}
         </select>
 
         <label>When did it happen?</label>
+        <p className="location-note">
+  Your current location helps us accurately place this report on the safety map.
+</p>
 
         <input
           type="datetime-local"
@@ -191,11 +193,11 @@ Anonymous: ${anonymous ? "Yes" : "No"}
           onChange={(e) => setIncidentTime(e.target.value)}
         />
 
-        {error && <p>{error}</p>}
+        {error && <p className="error">{error}</p>}
 
-        {success && <p>{success}</p>}
+        {success && <p className="success">{success}</p>}
 
-        <button type="submit">Submit Report</button>
+        <button type="submit">Submit Safety Report</button>
       </form>
     </div>
   );
