@@ -2,6 +2,7 @@ import psycopg2
 from dotenv import load_dotenv
 import os
 import h3
+import json
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "config", ".env"))
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -161,10 +162,71 @@ def seed_grid_cells_and_scores():
     conn.close()
     print(f"Processed {len(locations)} H3 grid cells with scores")
 
+def load_real_signals():
+    conn = get_connection()
+    cur = conn.cursor()
 
-if __name__ == "__main__":
-    seed_police_stations()
-    seed_streetlights()
-    seed_grid_cells_and_scores()  
+    json_path = os.path.join(
+        os.path.dirname(__file__), "..", "..",
+        "backend", "app", "data", "proxy_signals_kanpur.json"
+    )
+
+    with open(json_path, "r") as f:
+        data = json.load(f)
+
+    streetlight_count = 0
+    police_count = 0
+    poi_count = 0
+    report_count = 0
+
+    for signal in data:
+        signal_type = signal["signal_type"]
+        lat = signal["latitude"]
+        lng = signal["longitude"]
+
+        if signal_type == "streetlight":
+            cur.execute("""
+                INSERT INTO streetlights(location)
+                VALUES (ST_SetSRID(ST_MakePoint(%s,%s), 4326))
+                ON CONFLICT (location) DO NOTHING;
+                """, (lng, lat))
+            streetlight_count += 1
+
+        elif signal_type == "police_station":
+            cur.execute("""
+                INSERT INTO police_stations(name, location)
+                VALUES (%s, ST_SetSRID(ST_MakePoint(%s, %s), 4326))
+                ON CONFLICT (location) DO NOTHING;
+                """, (signal.get("name", "Unknown"), lng, lat))
+            police_count += 1
+
+        elif signal_type == "foot_traffic":
+            cur.execute("""
+                INSERT INTO points_of_interest (name, category, location)
+                VALUES (%s, %s, ST_SetSRID(ST_MakePoint(%s, %s), 4326))
+                ON CONFLICT (location) DO NOTHING;
+                """, ("Foot traffic signal", "foot_traffic", lng, lat))
+            poi_count += 1
+
+        elif signal_type == "user_report":
+            cur.execute("""
+                INSERT INTO user_reports(location, category, description)
+                VALUES (ST_SetSRID(ST_MakePoint(%s,  %s), 4326), %s, %s);
+                """, (lng, lat, signal["category"], "Imported from verified signal dataset"))
+            report_count += 1
+
+    conn.commit()
+    cur.close()
+    conn.close()
+
+    print(f"Loaded {streetlight_count} streetlights")
+    print(f"Loaded {police_count} police stations")
+    print(f"Loaded {poi_count} foot traffic points")
+    print(f"Loaded {report_count} user reports")
+
+
+
+if __name__ == "__main__": 
+    load_real_signals()
 
 

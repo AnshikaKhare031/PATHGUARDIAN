@@ -65,3 +65,29 @@ CREATE TABLE points_of_interest (
 );
 
 CREATE INDEX idx_poi_location ON points_of_interest USING GIST (location);
+
+
+    -- =========================================
+--ROW LEVEL SECURITY POLICIES
+-- =========================================
+-- grid_cells, safety_scores, police_stations, streetlights, points_of_interest:
+--   Public SELECT only (read-only for everyone)
+-- user_reports:
+--   Public SELECT + Public INSERT (anonymous reporting allowed)
+--   UPDATE/DELETE restricted to service role / admin only
+
+ALTER TABLE grid_cells ENABLE ROW LEVEL SECURITY;
+ALTER TABLE safety_scores ENABLE ROW LEVEL SECURITY;
+ALTER TABLE user_reports ENABLE ROW LEVEL SECURITY;
+ALTER TABLE police_stations ENABLE ROW LEVEL SECURITY;
+ALTER TABLE streetlights ENABLE ROW LEVEL SECURITY;
+ALTER TABLE points_of_interest ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Public can view grid cells" ON grid_cells FOR SELECT USING (true);
+CREATE POLICY "Public can view safety scores" ON safety_scores FOR SELECT USING (true);
+CREATE POLICY "Public can view police stations" ON police_stations FOR SELECT USING (true);
+CREATE POLICY "Public can view streetlights" ON streetlights FOR SELECT USING (true);
+CREATE POLICY "Public can view points of interest" ON points_of_interest FOR SELECT USING (true);
+
+CREATE POLICY "Public can view reports" ON user_reports FOR SELECT USING (true);
+CREATE POLICY "Public can submit reports" ON user_reports FOR INSERT WITH CHECK (true);
