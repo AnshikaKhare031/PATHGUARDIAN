@@ -5,6 +5,12 @@ from app.services.routing_service import get_route_alternatives
 
 router = APIRouter()
 
+# A route may be at most this much longer than the shortest alternative
+# (1.5 = 50% longer) to still be considered "reasonable".
+MAX_DETOUR_FACTOR = 1.5
+# Number of evenly spaced points sampled along a route for safety scoring.
+NUM_SAMPLES = 5
+
 
 class Coordinates(BaseModel):
     lat: float = Field(..., ge=-90, le=90, description="Latitude must be between -90 and 90")
@@ -16,75 +22,78 @@ class RouteRequest(BaseModel):
     end: Coordinates
 
 
-def _sample_points(geometry: list, num_samples: int = 5) -> list:
+def _sample_points(geometry: list, num_samples: int = NUM_SAMPLES) -> list:
     """
-    Picks a few evenly-spaced points along the route (not every single
-    point - that would be too many calls) so we can score safety along
-    the WHOLE route, not just the start and end.
+    Picks evenly spaced points along the route (always including the first
+    and the last point) so safety is scored along the WHOLE route, not just
+    at the start and end.
     """
     if len(geometry) <= num_samples:
         return geometry
     step = max(1, len(geometry) // num_samples)
-    return geometry[::step]
+    sampled = geometry[::step]
+    if sampled[-1] != geometry[-1]:
+        sampled.append(geometry[-1])
+    return sampled
 
 
 def _score_full_route(geometry: list) -> dict:
     """
     V1 approach: sample a handful of points along the route and average
-    their individual safety scores. This is intentionally simple -
-    good enough to demo, easy to explain in viva, and easy to upgrade
-    later (e.g. weighting darker/emptier stretches more heavily).
+    their safety scores and score breakdowns.
     """
     sampled = _sample_points(geometry)
-    scores = [
-        calculate_safety_score_for_point(p["lat"], p["lng"])["safety_score"]
-        for p in sampled
-    ]
-    avg_score = round(sum(scores) / len(scores), 1)
-    return {"safety_score": avg_score, "sampled_points": len(sampled)}
+    results = [calculate_safety_score_for_point(p["lat"], p["lng"]) for p in sampled]
+
+    n = len(results)
+    avg_score = round(sum(r["safety_score"] for r in results) / n, 1)
+    breakdown_keys = results[0]["breakdown"].keys()
+    avg_breakdown = {
+        key: round(sum(r["breakdown"][key] for r in results) / n, 1)
+        for key in breakdown_keys
+    }
+    return {
+        "safety_score": avg_score,
+        "breakdown": avg_breakdown,
+        "sampled_points": n,
+    }
 
 
 def _pick_safest_route(routes: list) -> dict:
     """
-    Compares route alternatives and picks the safest one - this is the
-    core "don't just pick the shortest route" logic.
+    Compares route alternatives and picks the safest one.
 
-    V1 rule (simple, explainable, intentionally not over-engineered):
+    Rule (simple and explainable):
       1. Score every alternative route for safety.
-      2. Find the shortest distance among all alternatives.
-      3. Only consider routes that are not more than 50% longer than
-         the shortest one (so we never suggest a silly 3x detour).
-      4. Among those "reasonable" routes, pick the one with the
-         highest safety score.
-
-    Why this rule: Route A (2km, safety 85) vs Route B (1.5km, safety
-    45) - Route A is only ~33% longer, well within the 50% limit, so
-    we pick the safer Route A over the shorter Route B. This is a
-    deliberately simple cost model - Safety Score -> Risk (inverse of
-    safety) -> Routing Cost, done here as a straightforward filter +
-    max-safety pick rather than a single combined formula, so it's
-    easy to explain and tune.
+      2. Find the shortest distance among the alternatives.
+      3. Keep only routes not more than 50% longer than the shortest one.
+      4. Among those, pick the one with the highest safety score.
+    Returns (best_route, all_scored_routes).
     """
     scored_routes = []
     for route in routes:
         if "error" in route:
             continue
-        safety_info = _score_full_route(route["geometry"])
-        scored_routes.append({**route, **safety_info})
+        scored_routes.append({**route, **_score_full_route(route["geometry"])})
 
     if not scored_routes:
-        # OSRM totally failed - fall back to whatever we got (straight line)
-        return routes[0]
+        # OSRM failed completely: nothing to score, return the fallback line.
+        return routes[0], []
 
-    shortest_distance = min(r["distance_km"] for r in scored_routes)
-    max_allowed_distance = shortest_distance * 1.5
+    shortest = min(r["distance_km"] for r in scored_routes)
+    reasonable = [r for r in scored_routes if r["distance_km"] <= shortest * MAX_DETOUR_FACTOR]
+    best = max(reasonable, key=lambda r: r["safety_score"])
+    return best, scored_routes
 
-    reasonable_routes = [
-        r for r in scored_routes if r["distance_km"] <= max_allowed_distance
-    ]
 
-    safest = max(reasonable_routes, key=lambda r: r["safety_score"])
-    return safest
+def _public_route(route: dict) -> dict:
+    return {
+        "geometry": route["geometry"],
+        "distance_km": route["distance_km"],
+        "duration_min": route.get("duration_min"),
+        "safety_score": route.get("safety_score"),
+        "breakdown": route.get("breakdown"),
+    }
 
 
 @router.post("/route")
@@ -97,17 +106,19 @@ async def get_safe_route(data: RouteRequest):
             raise HTTPException(status_code=400, detail="Start and end points cannot be the same")
 
         alternatives = await get_route_alternatives(start, end)
-        best_route = _pick_safest_route(alternatives)
+        best, scored = _pick_safest_route(alternatives)
+        selected = _public_route(best)
 
-        return {
-            "route": {
-                "geometry": best_route["geometry"],
-                "distance_km": best_route["distance_km"],
-                "duration_min": best_route.get("duration_min"),
-                "safety_score": best_route.get("safety_score"),
-            },
+        response = {
+            # Original response shape (list) kept so existing frontend code works.
+            "routes": [selected],
+            # Convenience single-route key.
+            "route": selected,
             "alternatives_considered": len(alternatives),
         }
+        if "error" in best:
+            response["warning"] = best["error"]
+        return response
     except HTTPException:
         raise
     except Exception as e:
