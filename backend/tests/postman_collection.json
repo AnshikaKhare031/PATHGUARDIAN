@@ -1,0 +1,62 @@
+{
+  "info": {
+    "name": "PathGuardian Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{ "key": "baseUrl", "value": "http://127.0.0.1:8000" }],
+  "item": [
+    {
+      "name": "Health",
+      "request": { "method": "GET", "url": "{{baseUrl}}/health" }
+    },
+    {
+      "name": "Safest route (Kanpur)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/route",
+        "body": { "mode": "raw", "raw": "{\n  \"start\": {\"lat\": 26.4499, \"lng\": 80.3319},\n  \"end\": {\"lat\": 26.4670, \"lng\": 80.3462}\n}" }
+      }
+    },
+    {
+      "name": "Route - same start and end (expect 400)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/route",
+        "body": { "mode": "raw", "raw": "{\n  \"start\": {\"lat\": 26.4499, \"lng\": 80.3319},\n  \"end\": {\"lat\": 26.4499, \"lng\": 80.3319}\n}" }
+      }
+    },
+    {
+      "name": "Route - invalid latitude (expect 422)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/route",
+        "body": { "mode": "raw", "raw": "{\n  \"start\": {\"lat\": 200, \"lng\": 80.3319},\n  \"end\": {\"lat\": 26.4670, \"lng\": 80.3462}\n}" }
+      }
+    },
+    {
+      "name": "Score a point",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/score",
+        "body": { "mode": "raw", "raw": "{\n  \"latitude\": 26.453714,\n  \"longitude\": 80.350288\n}" }
+      }
+    },
+    {
+      "name": "Submit report",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/reports",
+        "body": { "mode": "raw", "raw": "{\n  \"lat\": 26.4499,\n  \"lng\": 80.3319,\n  \"safety_rating\": 2,\n  \"comment\": \"Street light not working\"\n}" }
+      }
+    },
+    {
+      "name": "List reports",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/reports" }
+    }
+  ]
+}
